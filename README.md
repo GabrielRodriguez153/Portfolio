@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# 🚀 Portfólio ByteBrew - Gabriel Henrique
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-In the project directory, you can run:
+Um portfólio moderno e responsivo desenvolvido em **React** com **Tailwind CSS**, destacando habilidades e projetos de desenvolvimento web.
 
-### `npm start`
+🌐 [Site ao Vivo](#) • 📂 [Repositório](#)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://via.placeholder.com/800x400/2563eb/ffffff?text=ByteBrew+Portfolio+Preview" alt="Preview do Portfólio" width="100%"/>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</div>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Características
 
-### `npm run build`
+- 🎨 **Design Moderno** - Interface limpa e profissional com modo claro/escuro
+- 📱 **Totalmente Responsivo** - Adaptado para todos os dispositivos
+- ⚡ **Performance Otimizada** - Carregamento rápido e animações suaves
+- 🎯 **SEO Friendly** - Estrutura otimizada para mecanismos de busca
+- 🌙 **Modo Escuro** - Alternância entre temas claro e escuro
+- 🔧 **Fácil Customização** - Código modular e bem documentado
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tecnologias Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend:** React, Tailwind CSS
+- **Deploy:** GitHub Pages
+- **Ícones:** Font Awesome
+- **Fontes:** Google Fonts (Inter, Poppins)
+- **Build Tool:** Create React App
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📋 Estrutura do Projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+portfolio/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+|   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Contact.jsx
+│   │   └── Hero.jsx
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📞 Contato
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Gabriel Henrique**
 
-## Learn More
+- 📧 gabrodriguez153@gmail.com
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 🔗 [Linkedin](www.linkedin.com/in/gabrielhrodriguez)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 🐙 [GitHub](https://github.com/GabrielRodriguez153)
 
-### Code Splitting
+- 📍 Registro - SP, Brasil
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contribuindo
 
-### Analyzing the Bundle Size
+- Contribuições são sempre bem-vindas!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Faça um Fork do projeto
 
-### Making a Progressive Web App
+- Crie uma Branch (git checkout -b feature/AmazingFeature)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Adicione suas mudanças (git add .)
 
-### Advanced Configuration
+- Comite suas mudanças (git commit -m 'Add some AmazingFeature')
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Faça o Push da Branch (git push origin feature/AmazingFeature)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Abra um Pull Request
