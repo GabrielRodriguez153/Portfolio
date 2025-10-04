@@ -1,42 +1,134 @@
-# Portfolio - Gabriel Henrique
+# Portfólio - Gabriel Henrique
 
-Este é um portfólio profissional desenvolvido em [React](https://react.dev/) com [Vite](https://vitejs.dev/) e estilizado com [TailwindCSS](https://tailwindcss.com/). O objetivo é apresentar projetos, experiências e habilidades de forma moderna, responsiva e performática.
+![Portfolio Preview](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80)
 
-## Demonstração
+## 📋 Sobre o Projeto
 
-> (Adicione aqui o link do deploy, se houver)
+Este é meu portfólio pessoal desenvolvido com React e Tailwind CSS, apresentando minhas habilidades, projetos e experiência como Desenvolvedor Full-Stack. O design é moderno, responsivo e otimizado para uma ótima experiência do usuário.
 
-## Estrutura do Projeto
+## ✨ Características
+
+- 🎨 **Design Moderno** - Interface limpa e profissional com animações suaves  
+- 📱 **Totalmente Responsivo** - Adaptável a todos os dispositivos  
+- ⚡ **Performance Otimizada** - Carregamento rápido com Vite  
+- 🔧 **Componentizado** - Código organizado e reutilizável  
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **React 18** - Biblioteca JavaScript para interfaces  
+- **Tailwind CSS** - Framework CSS utilitário  
+- **Vite** - Build tool e dev server rápido  
+- **Font Awesome** - Ícones vetoriais  
+
+### Desenvolvimento
+- **ESLint** - Linting e padronização de código  
+- **Git** - Controle de versão  
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- Node.js (versão 16 ou superior)  
+- npm ou yarn  
+
+### Instalação e Execução
+
+1. **Clone o repositório**
+```bash
+git clone https://github.com/seu-usuario/portfolio.git
+cd portfolio
+```
+2. **Instale as dependências**
+```bash
+npm install
 
 ```
+3. **Execute em modo de desenvolvimento**
+```bash
+npm run dev
+
+```
+2. **Acesse no navegador**
+```bash
+http://localhost:5173
+
+```
+```bash
 portfolio/
-├── public/
-│   └── favicon.svg
+├── public/                 # Arquivos públicos
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── Footer/
-│   │   ├── Header/
-│   │   └── UI/
-│   ├── data/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── index.css
-│   └── main.jsx
-├── index.html
+│   ├── assets/            # Imagens e recursos estáticos
+│   ├── components/        # Componentes reutilizáveis
+│   │   ├── Footer/        # Componente do rodapé
+│   │   ├── Header/        # Componente do cabeçalho
+│   │   └── UI/            # Componentes de interface
+│   ├── data/              # Dados e conteúdo
+│   │   ├── experienceData.js
+│   │   ├── projectsData.js
+│   │   └── skillsData.js
+│   ├── pages/             # Páginas/Seções do portfólio
+│   │   ├── About/         # Seção Sobre
+│   │   ├── Contact/       # Seção Contato
+│   │   ├── Hero/          # Seção Hero/Início
+│   │   ├── Projects/      # Seção Projetos
+│   │   └── Skills/        # Seção Habilidades
+│   ├── App.css            # Estilos globais
+│   ├── App.jsx            # Componente principal
+│   ├── index.css          # Estilos principais
+│   └── main.jsx           # Ponto de entrada
+├── .gitignore
+├── eslint.config.js       # Configuração ESLint
+├── index.html             # HTML principal
 ├── package.json
-├── tailwind.config.cjs
-├── vite.config.js
-└── ...
+├── README.md
+├── tailwind.config.cjs    # Configuração Tailwind
+└── vite.config.js         # Configuração Vite
 ```
 
-## Scripts
+## 📱 Seções do Portfólio
+### 🏠 Hero
 
-- `npm run dev` — Inicia o servidor de desenvolvimento
-- `npm run build` — Gera a build de produção
-- `npm run preview` — Visualiza a build de produção localmente
-- `npm run lint` — Executa o ESLint
+- Apresentação pessoal
+
+- Título com efeito typewriter
+
+- Links para redes sociais
+
+- Call-to-action
+
+### 👨‍💻 Sobre
+
+- Timeline da jornada profissional/educacional
+
+- Informações pessoais
+
+- Download do CV
+
+### 💻 Skills
+
+- Filtro por categoria (Frontend, Backend, etc.)
+
+- Cards com barras de progresso
+
+- Animações interativas
+
+### 🚀 Projetos
+
+- Grid de projetos
+
+- Cards com preview visual
+
+- Links para código e demo
+
+- Tags de tecnologias
+
+### 📞 Contato
+
+- Formulário funcional
+
+- Informações de contato
+
+- Links para redes sociais
 
 ## Tecnologias Utilizadas
 
@@ -61,18 +153,15 @@ portfolio/
    npm run dev
    ```
 
-## Organização dos Arquivos
+### 👨‍💻 Autor
+**Gabriel Henrique**
 
-- **src/components**: Componentes reutilizáveis (Header, Footer, UI)
-- **src/pages**: Páginas principais do portfólio (About, Contact, Hero, Projects, Skills)
-- **src/data**: Dados estruturados para experiências, projetos e skills
-- **src/assets**: Imagens e ícones
-- **src/App.jsx**: Componente principal da aplicação
+- Email: gabrodriguez153@gmail.com
 
-## Licença
+- LinkedIn: www.linkedin.com/in/gabrielhrodriguez
 
-Este projeto é open-source e está sob a licença [MIT](LICENSE).
+- GitHub: @GabrielRodriguez153
 
----
+🤝 Contribuições
 
-Feito com 💻 por Gabriel Henrique
+Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
