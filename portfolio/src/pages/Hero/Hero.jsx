@@ -1,75 +1,95 @@
+import { useEffect, useState } from "react";
+import ImageHero from "../../assets/HomeLogo.svg";
+
 const Hero = () => {
-  const socialLinks = [
-    { icon: "fab fa-linkedin-in", url: "#" },
-    { icon: "fab fa-github", url: "#" },
-  ];
+  const [displayText, setDisplayText] = useState("");
+  const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const fullText = "Desenvolvedor Full-Stack";
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingSpeed = 100;
+
+    const typeWriter = () => {
+      if (currentIndex < fullText.length) {
+        setDisplayText(fullText.substring(0, currentIndex + 1));
+        currentIndex++;
+        setTimeout(typeWriter, typingSpeed);
+      } else {
+        setIsTypingComplete(true);
+      }
+    };
+
+    const startTimer = setTimeout(typeWriter, 500);
+
+    return () => {
+      clearTimeout(startTimer);
+    };
+  }, []);
 
   return (
     <section
-      id="home"
-      className="gradient-bg text-white pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden"
+      id="início"
+      className="gradient-bg text-white min-h-[98vh] flex items-center relative overflow-hidden"
     >
       <div className="absolute inset-0 hero-gradient opacity-90"></div>
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-orange-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-900/30 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 -right-20 w-60 h-60 bg-orange-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-blue-900/30 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center relative z-10">
-        <div className="md:w-1/2 mb-10 md:mb-0 animate-fadeIn">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10 py-8">
+        <div className="md:w-3/5 mb-8 md:mb-0 animate-fadeIn md:pr-8">
           <p className="text-lg mb-2 text-white/80">Olá, eu sou</p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">
             Gabriel Henrique
           </h1>
-          <h2 className="text-2xl md:text-4xl font-semibold mb-6 typewriter gradient-text">
-            Desenvolvedor Full-Stack
-          </h2>
-          <p className="text-lg mb-8 max-w-lg text-white/90">
+
+          <div className="mb-4 h-8 md:h-10 flex items-center">
+            <h2 className="text-xl md:text-2xl font-semibold gradient-text inline-flex items-center">
+              <span className="typewriter-text">{displayText}</span>
+              {!isTypingComplete && (
+                <span className="typewriter-caret ml-1">|</span>
+              )}
+            </h2>
+          </div>
+
+          <p className="text-base mb-6 max-w-md text-white/90 leading-relaxed text-justify">
             Transformo ideias em soluções digitais inovadoras com código limpo,
             design responsivo e performance excepcional.
           </p>
-          <div className="flex space-x-4">
-            <a
-              href="#projects"
-              className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-colors shadow-lg"
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#projects")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-orange-500 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-orange-600 transition-colors shadow-lg text-center outline-none cursor-pointer"
             >
               Ver Projetos
-            </a>
-            <a
-              href="#contact"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
+            </button>
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#contact")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+              className="border-2 border-white text-white px-5 py-2.5 rounded-lg outline-none cursor-pointer font-medium hover:bg-white hover:text-blue-900 transition-colors text-center"
             >
               Contato
-            </a>
-          </div>
-
-          <div className="flex space-x-6 mt-8">
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                className="text-white hover:text-orange-400 transition-colors text-xl"
-              >
-                <i className={social.icon}></i>
-              </a>
-            ))}
+            </button>
           </div>
         </div>
 
-        <div className="md:w-1/2 flex justify-center animate-fadeIn">
+        <div className="md:w-2/5 flex justify-center animate-fadeIn">
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-white/10 rounded-full flex items-center justify-center animate-float">
-              <div className="w-56 h-56 md:w-72 md:h-72 bg-orange-500/20 rounded-full flex items-center justify-center">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80"
-                  alt="João Silva"
-                  className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-white shadow-xl"
-                />
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-orange-500 text-white px-4 py-2 rounded-lg shadow-lg">
-              <p className="font-medium">Disponível para projetos</p>
-            </div>
+            <img
+              src={ImageHero}
+              alt="Gabriel Henrique"
+              className="w-60 h-70 md:w-78 md:h-95"
+            />
           </div>
         </div>
       </div>

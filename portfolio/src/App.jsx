@@ -2,6 +2,7 @@ import "./index.css";
 import Header from "./components/Header/Header";
 import Hero from "./pages/Hero/Hero";
 import About from "./pages/About/About";
+import Skills from "./pages/Skills/Skills";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <main>
         <Hero />
         <About />
-        {/* <Skills /> */}
+        <Skills />
         {/* <Projects />
         <Contact /> */}
       </main>
