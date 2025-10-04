@@ -1,11 +1,12 @@
 import { experienceData } from "../../data/experienceData";
+import PerfilPhoto from "../../assets/FotoPerfil.jpg";
 
 const About = () => {
   const infoItems = [
     {
       icon: "fas fa-graduation-cap",
       title: "Formação",
-      description: "Tecnólogo em Desenvolvimento de Software Multiplataforma",
+      description: "Tecnólogo em Desenvol. de Software Multiplataforma",
     },
     {
       icon: "fas fa-briefcase",
@@ -25,7 +26,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="sobre" className="py-25 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-4">Sobre Mim</h2>
         <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
@@ -34,55 +35,40 @@ const About = () => {
 
         <div className="flex flex-col lg:flex-row items-start gap-12">
           <div className="lg:w-2/5">
-            <div className="relative mb-8">
+            <div className="relative mb-8 ml-12 md:ml-34">
               <div className="w-72 h-72 bg-gradient-to-r from-orange-500 to-blue-900 rounded-2xl rotate-6 absolute -z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=1160&q=80"
+                src={PerfilPhoto}
                 alt="Sobre mim"
                 className="rounded-2xl shadow-xl w-72 h-72 object-cover"
               />
             </div>
 
             <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-              Atualmente sou estudante do 6º semestre na FATEC Registro,
-              cursando Tecnólogo em Desenvolvimento de Software Multiplataforma.
-              Meu objetivo é construir uma carreira sólida como engenheiro de
-              software, aprimorando continuamente minhas habilidades e me
-              mantendo atualizado com as tecnologias emergentes.
+              Sou um desenvolvedor fullstack apaixonado por tecnologia e por
+              criar soluções que realmente fazem a diferença. Gosto de
+              transformar ideias em aplicações funcionais, explorando tanto o
+              front-end quanto o back-end. Estou sempre aprendendo novas
+              ferramentas e buscando evoluir como profissional e como criador.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               {infoItems.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center bg-blue-50 p-3 rounded-xl"
+                  className="flex items-center bg-blue-50 p-3 rounded-xl shadow-xl"
                 >
                   <div className="bg-orange-500/10 p-2 rounded-lg mr-3">
                     <i className={`${item.icon} text-orange-500 text-lg`}></i>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 text-sm">
+                    <h3 className="font-semibold text-gray-800 text-md">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-xs">{item.description}</p>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#"
-                className="inline-flex items-center bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition-colors text-sm"
-              >
-                <i className="fas fa-download mr-2"></i> Baixar CV
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center border border-orange-500 text-orange-500 px-4 py-2 rounded-lg font-medium hover:bg-orange-500 hover:text-white transition-colors text-sm"
-              >
-                <i className="fas fa-envelope mr-2"></i> Contato
-              </a>
             </div>
           </div>
 
@@ -144,7 +130,7 @@ const About = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-2 mt-4">
-                          {item.type === "experience" && (
+                          {item.type === "experience" && item.id === 3 && (
                             <>
                               <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
                                 React
@@ -154,6 +140,22 @@ const About = () => {
                               </span>
                               <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">
                                 JavaScript
+                              </span>
+                            </>
+                          )}
+                          {item.type === "experience" && item.id === 4 && (
+                            <>
+                              <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                                Open Finance
+                              </span>
+                              <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">
+                                APIs Financeiras
+                              </span>
+                              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium">
+                                Blockchain
+                              </span>
+                              <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-medium">
+                                Segurança
                               </span>
                             </>
                           )}

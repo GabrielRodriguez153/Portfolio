@@ -26,4 +26,13 @@ export const experienceData = [
     icon: "fas fa-laptop-code",
     type: "experience",
   },
+  {
+    id: 4,
+    title: "Estagiário em Open Finance - Compass.UOL",
+    period: "Jul 2025 – Atualmente",
+    description:
+      "Estágio focado em Open Finance, aprofundando conhecimentos em APIs financeiras, blockchain, compartilhamento seguro de dados e segurança da informação. Atuando na construção de um ecossistema financeiro mais aberto, colaborativo e justo.",
+    icon: "fas fa-building",
+    type: "experience",
+  },
 ];
