@@ -25,7 +25,6 @@ import {
 import { FaJava } from "react-icons/fa";
 
 export const skillsData = [
-  // Frontend (1-8)
   {
     id: 1,
     category: "frontend",
@@ -116,7 +115,6 @@ export const skillsData = [
     details: "Desenvolvimento de aplicações SPA com Angular.",
   },
 
-  // Backend (9-15)
   {
     id: 9,
     category: "backend",
@@ -195,7 +193,6 @@ export const skillsData = [
     details: "Desenvolvimento de aplicações com Java.",
   },
 
-  // Database (16-18)
   {
     id: 16,
     category: "database",
@@ -229,8 +226,6 @@ export const skillsData = [
     borderColor: "#1E3A8A",
     details: "Consultas avançadas, stored procedures e performance.",
   },
-
-  // Tools (19-22)
   {
     id: 19,
     category: "tools",
