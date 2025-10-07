@@ -4,52 +4,63 @@ import { skillsData } from "../../data/skillsData";
 const Skills = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const filters = [
-    { key: "all", label: "Todas" },
-    { key: "frontend", label: "Frontend" },
-    { key: "backend", label: "Backend" },
-    { key: "database", label: "Banco de Dados" },
-    { key: "tools", label: "Ferramentas" },
-  ];
-
   const categoryConfig = {
-    frontend: {
-      title: "Frontend",
-      gradient: "from-blue-500 to-cyan-500",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200",
-      textColor: "text-blue-700",
-      cardBorder: "border-l-4 border-l-blue-500",
-      progressGradient: "from-blue-500 to-cyan-500",
-    },
-    backend: {
-      title: "Backend",
-      gradient: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
-      textColor: "text-green-700",
-      cardBorder: "border-l-4 border-l-green-500",
-      progressGradient: "from-green-500 to-emerald-500",
-    },
-    database: {
-      title: "Banco de Dados",
-      gradient: "from-purple-500 to-violet-500",
-      bgColor: "bg-purple-50",
-      borderColor: "border-purple-200",
-      textColor: "text-purple-700",
-      cardBorder: "border-l-4 border-l-purple-500",
-      progressGradient: "from-purple-500 to-violet-500",
-    },
-    tools: {
-      title: "Ferramentas",
+    all: {
+      label: "Todas",
       gradient: "from-orange-500 to-red-500",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
       textColor: "text-orange-700",
+      hoverGradient: "hover:from-orange-600 hover:to-red-600",
       cardBorder: "border-l-4 border-l-orange-500",
       progressGradient: "from-orange-500 to-red-500",
     },
+    frontend: {
+      label: "Frontend",
+      gradient: "from-blue-500 to-cyan-500",
+      bgColor: "bg-blue-50",
+      borderColor: "border-blue-200",
+      textColor: "text-blue-700",
+      hoverGradient: "hover:from-blue-600 hover:to-cyan-600",
+      cardBorder: "border-l-4 border-l-blue-500",
+      progressGradient: "from-blue-500 to-cyan-500",
+    },
+    backend: {
+      label: "Backend",
+      gradient: "from-green-500 to-emerald-500",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      textColor: "text-green-700",
+      hoverGradient: "hover:from-green-600 hover:to-emerald-600",
+      cardBorder: "border-l-4 border-l-green-500",
+      progressGradient: "from-green-500 to-emerald-500",
+    },
+    database: {
+      label: "Banco de Dados",
+      gradient: "from-purple-500 to-violet-500",
+      bgColor: "bg-purple-50",
+      borderColor: "border-purple-200",
+      textColor: "text-purple-700",
+      hoverGradient: "hover:from-purple-600 hover:to-violet-600",
+      cardBorder: "border-l-4 border-l-purple-500",
+      progressGradient: "from-purple-500 to-violet-500",
+    },
+    tools: {
+      label: "Ferramentas",
+      gradient: "from-amber-500 to-orange-500",
+      bgColor: "bg-amber-50",
+      borderColor: "border-amber-200",
+      textColor: "text-amber-700",
+      hoverGradient: "hover:from-amber-600 hover:to-orange-600",
+      cardBorder: "border-l-4 border-l-amber-500",
+      progressGradient: "from-amber-500 to-orange-500",
+    },
   };
+
+  const filters = Object.keys(categoryConfig).map((key) => ({
+    key,
+    label: categoryConfig[key].label,
+  }));
 
   const filteredSkills =
     activeFilter === "all"
@@ -104,20 +115,28 @@ const Skills = () => {
           Tecnologias e ferramentas que domino e utilizo no meu dia a dia
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter.key}
-              onClick={() => setActiveFilter(filter.key)}
-              className={`filter-btn px-4 py-2 rounded-lg font-medium transition-colors ${
-                activeFilter === filter.key
-                  ? "bg-orange-500 text-white"
-                  : "bg-white text-gray-700 hover:bg-orange-500 hover:text-white"
-              }`}
-            >
-              {filter.label}
-            </button>
-          ))}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {filters.map((filter) => {
+            const config = categoryConfig[filter.key];
+            const isActive = activeFilter === filter.key;
+
+            return (
+              <button
+                key={filter.key}
+                onClick={() => setActiveFilter(filter.key)}
+                className={`
+                  filter-btn px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 cursor-pointer
+                  ${
+                    isActive
+                      ? `bg-gradient-to-r ${config.gradient} text-white shadow-lg scale-105`
+                      : `bg-white ${config.textColor} border-2 ${config.borderColor} hover:bg-gradient-to-r ${config.hoverGradient} hover:text-white hover:border-transparent`
+                  }
+                `}
+              >
+                {filter.label}
+              </button>
+            );
+          })}
         </div>
 
         <div className="space-y-8">
@@ -127,16 +146,16 @@ const Skills = () => {
               return (
                 <div
                   key={category}
-                  className={`rounded-2xl p-6 ${config.bgColor} ${config.borderColor} border`}
+                  className={`rounded-2xl p-6 ${config.bgColor} ${config.borderColor} border shadow-sm`}
                 >
                   <div className="flex items-center mb-6">
                     <div
                       className={`w-3 h-8 rounded-full bg-gradient-to-r ${config.gradient} mr-3`}
                     ></div>
                     <h3 className={`text-2xl font-bold ${config.textColor}`}>
-                      {config.title}
+                      {config.label}
                     </h3>
-                    <span className="ml-3 px-3 py-1 text-sm rounded-full bg-white border">
+                    <span className="ml-3 px-3 py-1 text-sm rounded-full bg-white border shadow-sm">
                       {skills.length} skills
                     </span>
                   </div>
@@ -155,7 +174,7 @@ const Skills = () => {
             })
           ) : (
             <div
-              className={`rounded-2xl p-6 ${categoryConfig[activeFilter]?.bgColor} ${categoryConfig[activeFilter]?.borderColor} border`}
+              className={`rounded-2xl p-6 ${categoryConfig[activeFilter]?.bgColor} ${categoryConfig[activeFilter]?.borderColor} border shadow-sm`}
             >
               <div className="flex items-center mb-6">
                 <div
@@ -164,9 +183,9 @@ const Skills = () => {
                 <h3
                   className={`text-2xl font-bold ${categoryConfig[activeFilter]?.textColor}`}
                 >
-                  {categoryConfig[activeFilter]?.title}
+                  {categoryConfig[activeFilter]?.label}
                 </h3>
-                <span className="ml-3 px-3 py-1 text-sm rounded-full bg-white border">
+                <span className="ml-3 px-3 py-1 text-sm rounded-full bg-white border shadow-sm">
                   {filteredSkills.length} skills
                 </span>
               </div>

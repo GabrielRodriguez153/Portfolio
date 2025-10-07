@@ -173,17 +173,6 @@ export const skillsData = [
   {
     id: 14,
     category: "backend",
-    icon: SiLaravel,
-    iconColor: "text-red-700",
-    title: "Laravel",
-    description: "Framework Web PHP",
-    level: 70,
-    borderColor: "#EA580C",
-    details: "Desenvolvimento de aplicações web com Laravel.",
-  },
-  {
-    id: 15,
-    category: "backend",
     icon: FaJava,
     iconColor: "text-blue-600",
     title: "Java",
@@ -194,7 +183,7 @@ export const skillsData = [
   },
 
   {
-    id: 16,
+    id: 15,
     category: "database",
     icon: SiMysql,
     iconColor: "text-blue-500",
@@ -205,7 +194,7 @@ export const skillsData = [
     details: "Modelagem de dados, queries complexas e otimização.",
   },
   {
-    id: 17,
+    id: 16,
     category: "database",
     icon: SiMongodb,
     iconColor: "text-green-500",
@@ -216,7 +205,7 @@ export const skillsData = [
     details: "Agregações, índices e modelagem de dados documentais.",
   },
   {
-    id: 18,
+    id: 17,
     category: "database",
     icon: SiPostgresql,
     iconColor: "text-blue-700",
@@ -227,7 +216,7 @@ export const skillsData = [
     details: "Consultas avançadas, stored procedures e performance.",
   },
   {
-    id: 19,
+    id: 18,
     category: "tools",
     icon: SiGit,
     iconColor: "text-orange-600",
@@ -238,7 +227,7 @@ export const skillsData = [
     details: "Versionamento, branching strategy e Git Flow.",
   },
   {
-    id: 20,
+    id: 19,
     category: "tools",
     icon: SiDocker,
     iconColor: "text-blue-500",
@@ -249,7 +238,7 @@ export const skillsData = [
     details: "Criação de containers, Docker Compose e orquestração.",
   },
   {
-    id: 21,
+    id: 20,
     category: "tools",
     icon: SiFigma,
     iconColor: "text-neutral-950",
@@ -260,7 +249,7 @@ export const skillsData = [
     details: "Design de interfaces, protótipos interativos e colaboração.",
   },
   {
-    id: 22,
+    id: 21,
     category: "tools",
     icon: SiAmazonwebservices,
     iconColor: "text-orange-500",

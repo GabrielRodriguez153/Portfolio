@@ -70,7 +70,7 @@ const Hero = () => {
               <button
                 onClick={() =>
                   document
-                    .querySelector("#projects")
+                    .querySelector("#projetos")
                     .scrollIntoView({ behavior: "smooth" })
                 }
                 className="group bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center outline-none cursor-pointer flex items-center justify-center"
@@ -82,7 +82,7 @@ const Hero = () => {
               <button
                 onClick={() =>
                   document
-                    .querySelector("#contact")
+                    .querySelector("#contato")
                     .scrollIntoView({ behavior: "smooth" })
                 }
                 className="group border-2 border-white/80 text-white px-8 py-4 rounded-xl font-semibold outline-none cursor-pointer hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:-translate-y-1 text-center flex items-center justify-center"
@@ -114,15 +114,6 @@ const Hero = () => {
 
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-500 rounded-full animate-bounce animation-delay-1000"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500 rounded-full animate-bounce animation-delay-2000"></div>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center text-white/60">
-          <span className="text-sm mb-2">Scroll</span>
-          <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>
