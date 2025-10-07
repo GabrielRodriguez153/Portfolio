@@ -4,7 +4,7 @@ export const experienceData = [
     title: "Estagiário em Open Finance - Compass.UOL",
     period: "Jul 2025 – Atualmente",
     description:
-      "Estágio focado em Open Finance, aprofundando conhecimentos em APIs financeiras, blockchain, compartilhamento seguro de dados e segurança da informação. Atuando na construção de um ecossistema financeiro mais aberto, colaborativo e justo.",
+      "Fortaleci a segurança e a interoperabilidade de APIs financeiras durante estágio focado em Open Finance, ao implementar integrações seguras e mecanismos de compartilhamento de dados (incluindo aplicações práticas de blockchain), contribuindo para a proteção da informação e para um ecossistema financeiro mais aberto e resiliente.",
     icon: "fas fa-building",
     type: "experience",
     tags: [
@@ -20,7 +20,7 @@ export const experienceData = [
     title: "Desenvolvedor Front-End no Laboratório de Práticas",
     period: "Mai 2025 - Jun 2025",
     description:
-      "Desenvolvedor Front-End em React e Next.js, contribuindo para o desenvolvimento do sistema de Vitrine de Projetos.",
+      "Implementei interfaces responsivas em React e Next.js para o sistema Vitrine de Projetos, desenvolvendo componentes reutilizáveis e realizando otimizações de performance que reduziram a complexidade do front-end e melhoraram a experiência do usuário.",
     icon: "fas fa-laptop-code",
     type: "experience",
     tags: [
@@ -38,7 +38,7 @@ export const experienceData = [
     title: "Tecnólogo em Desenvolvimento de Software Multiplataforma",
     period: "2023 - Atualmente",
     description:
-      "Atualmente sou aluno do 6º semestre da FATEC Registro cursando Desenvolvimento de Software Multiplataforma.",
+      "Cursando o 6º semestre do Tecnólogo em Desenvolvimento de Software Multiplataforma na FATEC Registro, aprofundando competências em arquitetura de software, testes automatizados e práticas ágeis aplicadas ao desenvolvimento.",
     icon: "fas fa-university",
     type: "education",
     tags: [
@@ -53,7 +53,7 @@ export const experienceData = [
     title: "Ensino Médio com Educação Técnica Integrada",
     period: "2020 - 2022",
     description:
-      "Cursei o ensino médio com um curso técnico integrado em desenvolvimento de sistemas na ETEC de Registro.",
+      "Cursei o ensino médio integrado ao Técnico em Desenvolvimento de Sistemas pela ETEC de Registro, consolidando fundamentos em programação, modelagem de dados e boas práticas de engenharia de software.",
     icon: "fas fa-graduation-cap",
     type: "education",
     tags: [
